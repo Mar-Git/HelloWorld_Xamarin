@@ -16,18 +16,19 @@ namespace HelloWorld_Xamarin
         {
             InitializeComponent();
         }
-        /**
-         * comentarios: este metodo sirve para introducir un nombre y mostrar un mensaje en pantalla saludando
-         * entradas: ??
-         * precondiciones: ??
-         * salidas: no hay
-         * postcondiciones: a la salida se habrá generado un mensaje en pantalla a la persona que ha introducido el nombre
-         */
+        /// <summary>
+        /// evento asociado al click del boton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Clicked(object sender, EventArgs e)
+            //async y await sirve para que no se quede el hilo de aplicacion colgado
         {
-            Entry entry = txtNombre;//nueva entrada que coja el txt que escriba el usuario txtNombre esta declarado en MainPage.xaml
-            clsPersona persona1 = new clsPersona(entry.Text);
-            await DisplayAlert ("Mensaje", "Hola "+persona1.Nombre+" saludos", "OK");
+            #region declaracionVariables
+            //coge el txt que escriba el usuario txtNombre esta declarado en MainPage.xaml
+            clsPersona user = new clsPersona(txtNombre.Text);
+            #endregion 
+            await DisplayAlert ("Mensaje", $"Hola { user.Nombre}  saludos", "OK");
         }
     }
 }
