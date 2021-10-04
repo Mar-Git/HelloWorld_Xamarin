@@ -19,6 +19,9 @@
                 </FormattedString>
             </Label.FormattedText>
         </Label>
+        <Label Text="Escribe tu nombre"></Label>
+        <Entry x:Name="txtNombre"></Entry>
+        <Button Text="continuar" Clicked="Button_Clicked"></Button>
     </StackLayout>
 
 </ContentPage>
