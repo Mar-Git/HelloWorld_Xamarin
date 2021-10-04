@@ -17,7 +17,11 @@ namespace HelloWorld_Xamarin
             InitializeComponent();
         }
         /**
-         * 
+         * comentarios: este metodo sirve para introducir un nombre y mostrar un mensaje en pantalla saludando
+         * entradas: ??
+         * precondiciones: ??
+         * salidas: no hay
+         * postcondiciones: a la salida se habrá generado un mensaje en pantalla a la persona que ha introducido el nombre
          */
         private async void Button_Clicked(object sender, EventArgs e)
         {
